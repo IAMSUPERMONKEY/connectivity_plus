@@ -6,7 +6,6 @@ package dev.fluttercommunity.plus.connectivity;
 
 import android.content.Context;
 import android.net.ConnectivityManager;
-import android.util.Log;
 
 import androidx.annotation.NonNull;
 
@@ -43,7 +42,6 @@ class ConnectivityMethodChannelHandler implements MethodChannel.MethodCallHandle
       result.success(connectivity.getNetworkType());
     } else if ("initConfig".equals(call.method)) {
       // 初始化 connectivity
-      Log.d("flutter", "初始化 ");
       ConnectivityManager connectivityManager =
           (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 

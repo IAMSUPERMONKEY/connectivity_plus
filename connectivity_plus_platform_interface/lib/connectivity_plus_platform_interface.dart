@@ -44,6 +44,7 @@ abstract class ConnectivityPlatform extends PlatformInterface {
   }
 
   /// initConfig
+  /// only android
   Future<void> initConfig() {
     throw UnimplementedError('initConfig() has not been implemented.');
   }

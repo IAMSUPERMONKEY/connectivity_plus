@@ -10,7 +10,9 @@ import android.net.NetworkCapabilities;
 import android.os.Build;
 import android.util.Log;
 
-/** Reports connectivity related information such as connectivity type and wifi information. */
+/**
+ * Reports connectivity related information such as connectivity type and wifi information.
+ */
 public class Connectivity {
   static final String CONNECTIVITY_NONE = "none";
   static final String CONNECTIVITY_WIFI = "wifi";

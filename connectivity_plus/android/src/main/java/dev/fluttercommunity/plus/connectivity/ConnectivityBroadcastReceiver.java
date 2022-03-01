@@ -13,6 +13,7 @@ import android.net.Network;
 import android.os.Build;
 import android.os.Handler;
 import android.os.Looper;
+
 import io.flutter.plugin.common.EventChannel;
 
 /**
@@ -37,8 +38,8 @@ public class ConnectivityBroadcastReceiver extends BroadcastReceiver
   }
 
   /// 由外部绑定
-  static void bindConnect(Connectivity conn){
-    connectivity =  conn;
+  static void bindConnect(Connectivity conn) {
+    connectivity = conn;
   }
 
   @Override
