@@ -7,8 +7,7 @@ import 'dart:async';
 import 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart';
 
 // Export enums from the platform_interface so plugin users can use them directly.
-export 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart'
-    show ConnectivityResult;
+export 'package:connectivity_plus_platform_interface/connectivity_plus_platform_interface.dart' show ConnectivityResult;
 
 /// Discover network connectivity configurations: Distinguish between WI-FI and cellular, check WI-FI status and more.
 class Connectivity {
@@ -48,5 +47,9 @@ class Connectivity {
   /// Instead listen for connectivity changes via [onConnectivityChanged] stream.
   Future<ConnectivityResult> checkConnectivity() {
     return _platform.checkConnectivity();
+  }
+
+  Future<void> initConfig() {
+    return _platform.initConfig();
   }
 }

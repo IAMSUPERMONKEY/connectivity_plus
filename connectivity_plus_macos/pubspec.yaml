@@ -15,6 +15,9 @@ flutter:
         pluginClass: ConnectivityPlugin
 
 dependencies:
-  connectivity_plus_platform_interface: ^1.1.0
+  connectivity_plus_platform_interface:
+    git:
+      url: https://github.com/IAMSUPERMONKEY/connectivity_plus
+      path: connectivity_plus_platform_interface
   flutter:
     sdk: flutter

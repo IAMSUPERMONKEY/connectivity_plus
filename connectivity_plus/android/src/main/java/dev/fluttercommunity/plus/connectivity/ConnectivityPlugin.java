@@ -32,14 +32,10 @@ public class ConnectivityPlugin implements FlutterPlugin {
   private void setupChannels(BinaryMessenger messenger, Context context) {
     methodChannel = new MethodChannel(messenger, "dev.fluttercommunity.plus/connectivity");
     eventChannel = new EventChannel(messenger, "dev.fluttercommunity.plus/connectivity_status");
-    ConnectivityManager connectivityManager =
-        (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
 
-    Connectivity connectivity = new Connectivity(connectivityManager);
-
+    receiver = new ConnectivityBroadcastReceiver(context);
     ConnectivityMethodChannelHandler methodChannelHandler =
-        new ConnectivityMethodChannelHandler(connectivity);
-    receiver = new ConnectivityBroadcastReceiver(context, connectivity);
+        new ConnectivityMethodChannelHandler(context);
 
     methodChannel.setMethodCallHandler(methodChannelHandler);
     eventChannel.setStreamHandler(receiver);

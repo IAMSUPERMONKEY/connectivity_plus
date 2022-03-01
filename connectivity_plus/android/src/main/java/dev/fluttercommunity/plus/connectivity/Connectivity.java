@@ -8,6 +8,7 @@ import android.net.ConnectivityManager;
 import android.net.Network;
 import android.net.NetworkCapabilities;
 import android.os.Build;
+import android.util.Log;
 
 /** Reports connectivity related information such as connectivity type and wifi information. */
 public class Connectivity {
@@ -23,6 +24,7 @@ public class Connectivity {
   }
 
   String getNetworkType() {
+    Log.d("flutter", "获取网络信息 ----");
     if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
       Network network = connectivityManager.getActiveNetwork();
       NetworkCapabilities capabilities = connectivityManager.getNetworkCapabilities(network);
