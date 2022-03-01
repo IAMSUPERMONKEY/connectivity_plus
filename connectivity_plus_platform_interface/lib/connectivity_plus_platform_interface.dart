@@ -45,7 +45,7 @@ abstract class ConnectivityPlatform extends PlatformInterface {
 
   /// initConfig
   Future<void> initConfig() {
-    throw UnimplementedError('checkConnectivity() has not been implemented.');
+    throw UnimplementedError('initConfig() has not been implemented.');
   }
 
   /// Returns a Stream of ConnectivityResults changes.
